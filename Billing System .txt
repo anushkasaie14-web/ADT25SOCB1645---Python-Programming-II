@@ -1,0 +1,33 @@
+print ("Welcome To The PYTHON Restaurant ")
+menu = {
+   "coffee" : 20,
+    "tea" : 10,
+   "pizza" : 100,
+   "burger" : 50
+
+}
+order_total= 0
+print ("Menu Of The Restaurant \n Coffee = rs 20\n Tea = rs 10\n Pizza = rs 100\n Burger = rs 50 ")
+
+order_1=input("Enter your order : ").lower().strip()
+if order_1 in menu :
+    order_total +=menu[order_1]
+    print (f"Your bill is { order_total}")
+else:
+    print (f"Sorry , We can not serve you your {order_1} please order from the menu ")
+
+while True :
+    question_1 = input (" Your order is being prepared , would you like to order something else  (yes \ no ) : ").lower().strip()
+
+
+    if question_1 == "yes":
+        order_2=input("Enter your order : ").lower().strip()
+        if order_2 in menu :
+             order_total +=menu[order_2]
+             print (f"Your bill is {order_total}")
+        else:
+             print (f"Sorry , We can not serve you your {order_2} please order from the menu ")
+
+    else:
+        print (f"Your total bill is {order_total}")
+        break
